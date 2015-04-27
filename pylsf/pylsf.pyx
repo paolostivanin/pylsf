@@ -5,7 +5,6 @@ PyLSF : Pyrex module for interfacing to Platform LSF 6.2
 """
 
 import string
-from sets import Set
 from os import getenv
 
 cdef extern from "string.h":
@@ -5322,7 +5321,7 @@ def __countDuplicatesInList(dupLst):
    """
 
    newLst = []
-   uniqueSet = Set(dupLst)
+   uniqueSet = set(dupLst)
    for item in uniqueSet:
       newLst.append((item, dupLst.count(item)))
    return newLst
